@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact TechVision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="brand" href="index.html"><img src="assets/logo.svg" alt="TechVision"></a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a class="nav-cta" href="contact.html" aria-current="page">Start a Project</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <p class="eyebrow">Contact</p>
+            <h1>Tell us what you want to build.</h1>
+            <p>This is the main place to implement TechVision forms. The form is structured for contact, consultation, and quote requests.</p>
+        </section>
+
+        <section class="form-layout">
+            <aside class="contact-info">
+                <h2>Company details</h2>
+                <dl>
+                    <dt>Email</dt><dd><a href="mailto:info@techvision.com">info@techvision.com</a></dd>
+                    <dt>Location</dt><dd>Nairobi, Kenya</dd>
+                    <dt>Response time</dt><dd>Within one business day</dd>
+                </dl>
+            </aside>
+
+            <form class="project-form" id="projectForm" action="#" method="post">
+                <div class="form-row"><label for="firstName">First name</label><input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required></div>
+                <div class="form-row"><label for="lastName">Last name</label><input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required></div>
+                <div class="form-row"><label for="email">Email address</label><input type="email" id="email" name="email" placeholder="name@example.com" required></div>
+                <div class="form-row"><label for="company">Company or organization</label><input type="text" id="company" name="company" placeholder="Your company name"></div>
+                <div class="form-row full">
+                    <label for="service">Service needed</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="web-development">Web development</option>
+                        <option value="mobile-app">Mobile app</option>
+                        <option value="cloud-computing">Cloud computing</option>
+                        <option value="automation">Business automation</option>
+                        <option value="consulting">Technology consulting</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Project budget</legend>
+                    <label><input type="radio" name="budget" value="under-1000"> Under $1,000</label>
+                    <label><input type="radio" name="budget" value="1000-5000"> $1,000 - $5,000</label>
+                    <label><input type="radio" name="budget" value="5000-plus"> $5,000+</label>
+                </fieldset>
+                <fieldset>
+                    <legend>What should we help with?</legend>
+                    <label><input type="checkbox" name="supportAreas" value="strategy"> Strategy</label>
+                    <label><input type="checkbox" name="supportAreas" value="design"> Design</label>
+                    <label><input type="checkbox" name="supportAreas" value="development"> Development</label>
+                    <label><input type="checkbox" name="supportAreas" value="support"> Support</label>
+                </fieldset>
+                <div class="form-row full"><label for="message">Project details</label><textarea id="message" name="message" rows="6" placeholder="Describe your project, goals, timeline, and any existing systems." required></textarea></div>
+                <button class="button primary" type="submit">Send Request</button>
+                <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechVision. Nairobi, Kenya.</p>
+        <a href="mailto:info@techvision.com">info@techvision.com</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-labelledby="title desc">
+  <title id="title">TechVision logo</title>
+  <desc id="desc">A compact TechVision brand mark with company name.</desc>
+  <rect width="64" height="64" rx="14" fill="#084c61"/>
+  <path d="M18 20h28v7H35v24h-7V27H18z" fill="#fff"/>
+  <path d="M40 20h8l-12 31h-7z" fill="#f2a541"/>
+  <path d="M80 18h44v8h-17v35h-10V26H80z" fill="#084c61"/>
+  <path d="M130 18h36v8h-26v9h23v8h-23v10h27v8h-37z" fill="#084c61"/>
+  <path d="M174 18h10v35h24v8h-34z" fill="#0e6f7b"/>
+</svg>
