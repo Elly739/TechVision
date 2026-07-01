@@ -29,40 +29,47 @@
         </section>
 
         <section class="form-layout">
-            <article class="wide-card">
-                <div>
-                    <img class="service-icon" src="assets/icon-web.svg" alt="">
-                    <h2>Estimate Your Project</h2>
+            <aside class="contact-info">
+                <h2>How it works</h2>
+                <dl>
+                    <dt>Pages × Complexity × $500-1000</dt>
+                    <dd>Base cost calculation</dd>
+                    <dt>Features add $1000-2000 each</dt>
+                    <dd>Additional feature costs</dd>
+                </dl>
+            </aside>
+
+            <form class="project-form" id="estimatorForm">
+                <div class="form-row full">
+                    <h3 style="margin: 0 0 16px; color: var(--brand-dark);">Estimate Your Project</h3>
                 </div>
-                <form class="project-form" id="estimatorForm">
-                    <div class="form-row">
-                        <label for="pages">Number of Pages/Views <span style="color: var(--muted); font-weight: normal;">(e.g., 5)</span></label>
-                        <input type="number" id="pages" placeholder="Enter number of pages" min="1" value="5">
-                    </div>
-                    <div class="form-row">
-                        <label for="complexity">Complexity Level <span style="color: var(--muted); font-weight: normal;">(1=Basic, 5=Complex)</span></label>
-                        <input type="range" id="complexity" min="1" max="5" value="3" oninput="updateComplexity(this.value)">
-                        <output id="complexityOutput" for="complexity" style="display: block; margin-top: 8px; font-weight: 600; color: var(--brand-dark);">Medium (3)</output>
-                    </div>
-                    <div class="form-row">
-                        <label for="features">Key Features</label>
-                        <select id="features">
-                            <option value="5">Basic (forms, static content)</option>
-                            <option value="10" selected>Standard (+database, auth)</option>
-                            <option value="15">Advanced (+API, integrations)</option>
-                            <option value="20">Premium (+realtime, payments)</option>
-                        </select>
-                    </div>
-                    <div class="form-row full">
-                        <button class="button primary" type="button" onclick="calculateEstimate()">Calculate Estimate</button>
-                    </div>
-                    <div class="form-row full" id="estimateResult" style="padding: 24px; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%); border-radius: 8px; display: none; color: white;">
-                        <p style="margin: 0; font-size: 1.2rem;"><strong>Estimated Range:</strong></p>
-                        <p id="estimateValue" style="margin: 8px 0 0; font-size: 1.8rem; font-weight: 800;"></p>
-                        <p style="margin: 4px 0 0; font-size: 0.9rem; opacity: 0.9;">Based on TechVision pricing</p>
-                    </div>
-                </form>
-            </article>
+                <div class="form-row full">
+                    <label for="pages">Number of Pages/Views <span style="color: var(--muted); font-weight: normal;">(e.g., 5)</span></label>
+                    <input type="number" id="pages" placeholder="Enter number of pages" min="1" value="5">
+                </div>
+                <div class="form-row full">
+                    <label for="complexity">Complexity Level <span style="color: var(--muted); font-weight: normal;">(1=Basic, 5=Complex)</span></label>
+                    <input type="range" id="complexity" min="1" max="5" value="3" oninput="updateComplexity(this.value)">
+                    <output id="complexityOutput" for="complexity" style="display: block; margin-top: 8px; font-weight: 600; color: var(--brand-dark);">Medium (3)</output>
+                </div>
+                <div class="form-row full">
+                    <label for="features">Key Features</label>
+                    <select id="features">
+                        <option value="5">Basic (forms, static content)</option>
+                        <option value="10" selected>Standard (+database, auth)</option>
+                        <option value="15">Advanced (+API, integrations)</option>
+                        <option value="20">Premium (+realtime, payments)</option>
+                    </select>
+                </div>
+                <div class="form-row full">
+                    <button class="button primary" type="button" onclick="calculateEstimate()">Calculate Estimate</button>
+                </div>
+                <div class="form-row full" id="estimateResult" style="padding: 24px; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%); border-radius: 8px; display: none; color: white;">
+                    <p style="margin: 0; font-size: 1.1rem;"><strong>Estimated Range:</strong></p>
+                    <p id="estimateValue" style="margin: 10px 0 0; font-size: 1.8rem; font-weight: 800;"></p>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem; opacity: 0.9;">Based on TechVision pricing • <a href="contact.html" style="color: white;">Get exact quote</a></p>
+                </div>
+            </form>
         </section>
     </main>
 
