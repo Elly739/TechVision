@@ -18,7 +18,8 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="estimator.html" aria-current="page">Cost Estimator</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="estimator.html" aria-current="page">Estimator</a>
                 <a class="nav-cta" href="contact.html">Start a Project</a>
             </div>
         </nav>
@@ -31,48 +32,88 @@
             <p>Get a quick estimate for your project based on features and complexity.</p>
         </section>
 
-        <section class="form-layout">
-            <aside class="contact-info">
-                <h2>How it works</h2>
-                <dl>
-                    <dt>Pages × Complexity × $500-1000</dt>
-                    <dd>Base cost calculation</dd>
-                    <dt>Features add $1000-2000 each</dt>
-                    <dd>Additional feature costs</dd>
-                </dl>
-            </aside>
+        <section class="section">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1200px; margin: 0 auto; align-items: start;">
+                <!-- HOW IT WORKS CARD -->
+                <div class="form-card animate-on-scroll">
+                    <h3>How It Works</h3>
+                    <div style="padding: 20px 0;">
+                        <div style="margin-bottom: 24px;">
+                            <p style="margin: 0 0 8px; color: var(--brand); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Step 1: Scope</p>
+                            <p style="margin: 0; color: var(--muted); line-height: 1.6;">Tell us the number of pages or views your project needs.</p>
+                        </div>
+                        <div style="margin-bottom: 24px;">
+                            <p style="margin: 0 0 8px; color: var(--brand); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Step 2: Complexity</p>
+                            <p style="margin: 0; color: var(--muted); line-height: 1.6;">Rate the complexity from basic to highly advanced.</p>
+                        </div>
+                        <div style="margin-bottom: 24px;">
+                            <p style="margin: 0 0 8px; color: var(--brand); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Step 3: Features</p>
+                            <p style="margin: 0; color: var(--muted); line-height: 1.6;">Select your key features and integrations.</p>
+                        </div>
+                        <div style="padding: 16px; background: var(--soft); border-radius: 10px; margin-top: 24px;">
+                            <p style="margin: 0 0 8px; color: var(--ink); font-weight: 600; font-size: 0.9rem;">Formula:</p>
+                            <p style="margin: 0; color: var(--muted); font-size: 0.9rem; font-family: 'Courier New', monospace;">Pages × Complexity × $500-1000</p>
+                            <p style="margin: 8px 0 0; color: var(--muted); font-size: 0.9rem; font-family: 'Courier New', monospace;">+ Features × $1000-2000</p>
+                        </div>
+                    </div>
+                </div>
 
-            <form class="project-form" id="estimatorForm">
-                <div class="form-row full">
-                    <h3 style="margin: 0 0 16px; color: var(--brand-dark);">Estimate Your Project</h3>
+                <!-- ESTIMATOR FORM CARD -->
+                <form class="form-card animate-on-scroll" id="estimatorForm">
+                    <h3>Project Details</h3>
+                    
+                    <div class="form-group" style="margin-bottom: 24px;">
+                        <label for="pages">Number of Pages/Views</label>
+                        <input type="number" id="pages" placeholder="e.g., 5" min="1" value="5">
+                        <small style="color: var(--muted); margin-top: 4px; display: block;">How many main pages or sections?</small>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 24px;">
+                        <label for="complexity">Project Complexity</label>
+                        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px;">
+                            <button type="button" class="complexity-btn" data-value="1">Basic</button>
+                            <button type="button" class="complexity-btn" data-value="2">Simple</button>
+                            <button type="button" class="complexity-btn active" data-value="3">Medium</button>
+                            <button type="button" class="complexity-btn" data-value="4">Complex</button>
+                            <button type="button" class="complexity-btn" data-value="5">Expert</button>
+                        </div>
+                        <input type="range" id="complexity" min="1" max="5" value="3" style="width: 100%; margin-top: 16px;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 28px;">
+                        <label for="features">Key Features</label>
+                        <select id="features">
+                            <option value="5">Basic (Forms, Static Content)</option>
+                            <option value="10" selected>Standard (Database, User Auth)</option>
+                            <option value="15">Advanced (APIs, Integrations)</option>
+                            <option value="20">Premium (Real-time, Payments)</option>
+                        </select>
+                    </div>
+
+                    <button class="button primary" type="button" onclick="calculateEstimate()" style="width: 100%;">Calculate Estimate</button>
+                </form>
+            </div>
+
+            <!-- RESULT CARD -->
+            <div id="estimateResult" class="result-card animate-on-scroll" style="display: none; margin-top: 40px;">
+                <h2>Your Estimate</h2>
+                <div class="result-price" id="estimateValue" style="margin: 20px 0 30px;">$0</div>
+                <p style="color: var(--muted); margin: 0 0 28px; font-size: 1.05rem;">This is a preliminary estimate based on TechVision's standard pricing model.</p>
+                <div class="result-breakdown">
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">Estimated Timeline</div>
+                        <div class="breakdown-value" id="estimateTimeline">8-12 weeks</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">Project Size</div>
+                        <div class="breakdown-value" id="estimateSize">Medium</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">Next Step</div>
+                        <div style="margin-top: 8px;"><a href="contact.html" class="button primary" style="font-size: 0.85rem; padding: 8px 16px;">Get Exact Quote</a></div>
+                    </div>
                 </div>
-                <div class="form-row full">
-                    <label for="pages">Number of Pages/Views <span style="color: var(--muted); font-weight: normal;">(e.g., 5)</span></label>
-                    <input type="number" id="pages" placeholder="Enter number of pages" min="1" value="5">
-                </div>
-                <div class="form-row full">
-                    <label for="complexity">Complexity Level <span style="color: var(--muted); font-weight: normal;">(1=Basic, 5=Complex)</span></label>
-                    <input type="range" id="complexity" min="1" max="5" value="3" oninput="updateComplexity(this.value)">
-                    <output id="complexityOutput" for="complexity" style="display: block; margin-top: 8px; font-weight: 600; color: var(--brand-dark);">Medium (3)</output>
-                </div>
-                <div class="form-row full">
-                    <label for="features">Key Features</label>
-                    <select id="features">
-                        <option value="5">Basic (forms, static content)</option>
-                        <option value="10" selected>Standard (+database, auth)</option>
-                        <option value="15">Advanced (+API, integrations)</option>
-                        <option value="20">Premium (+realtime, payments)</option>
-                    </select>
-                </div>
-                <div class="form-row full">
-                    <button class="button primary" type="button" onclick="calculateEstimate()">Calculate Estimate</button>
-                </div>
-                <div class="form-row full" id="estimateResult" style="padding: 24px; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%); border-radius: 8px; display: none; color: white;">
-                    <p style="margin: 0; font-size: 1.1rem;"><strong>Estimated Range:</strong></p>
-                    <p id="estimateValue" style="margin: 10px 0 0; font-size: 1.8rem; font-weight: 800;"></p>
-                    <p style="margin: 5px 0 0; font-size: 0.9rem; opacity: 0.9;">Based on TechVision pricing • <a href="contact.html" style="color: white;">Get exact quote</a></p>
-                </div>
-            </form>
+            </div>
         </section>
     </main>
 
@@ -83,10 +124,22 @@
 
     <script src="script.js"></script>
     <script>
-        function updateComplexity(val) {
-            const labels = {1: 'Very Basic', 2: 'Basic', 3: 'Medium', 4: 'High', 5: 'Very Complex'};
-            document.getElementById('complexityOutput').textContent = labels[val] + ' (' + val + ')';
-        }
+        // Complexity button handling
+        document.querySelectorAll('.complexity-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.complexity-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('complexity').value = btn.dataset.value;
+            });
+        });
+
+        // Complexity range slider
+        document.getElementById('complexity').addEventListener('input', (e) => {
+            document.querySelectorAll('.complexity-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.value === e.target.value);
+            });
+        });
 
         function calculateEstimate() {
             const pages = parseInt(document.getElementById('pages').value) || 0;
@@ -94,8 +147,7 @@
             const features = parseInt(document.getElementById('features').value) || 0;
 
             if (pages <= 0) {
-                document.getElementById('estimateValue').textContent = 'Please enter valid page count';
-                document.getElementById('estimateResult').style.display = 'block';
+                alert('Please enter a valid number of pages');
                 return;
             }
 
@@ -106,12 +158,58 @@
 
             const minEstimate = baseMin + featureMin;
             const maxEstimate = baseMax + featureMax;
+            const avgEstimate = Math.round((minEstimate + maxEstimate) / 2);
 
-            document.getElementById('estimateValue').textContent = '$' + minEstimate.toLocaleString() + ' - $' + maxEstimate.toLocaleString();
+            // Determine project size
+            let size = 'Small';
+            if (avgEstimate > 25000) size = 'Enterprise';
+            else if (avgEstimate > 15000) size = 'Large';
+            else if (avgEstimate > 8000) size = 'Medium';
+
+            // Estimate timeline
+            let timeline = '4-6 weeks';
+            if (complexity >= 4) timeline = '12-16 weeks';
+            else if (complexity >= 3) timeline = '8-12 weeks';
+            else if (complexity >= 2) timeline = '6-8 weeks';
+
+            document.getElementById('estimateValue').textContent = '$' + avgEstimate.toLocaleString();
+            document.getElementById('estimateSize').textContent = size;
+            document.getElementById('estimateTimeline').textContent = timeline;
             document.getElementById('estimateResult').style.display = 'block';
+            
+            // Scroll to result
+            setTimeout(() => {
+                document.getElementById('estimateResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
         }
 
-        updateComplexity(3);
+        // Add CSS for complexity buttons
+        const style = document.createElement('style');
+        style.textContent = `
+            .complexity-btn {
+                padding: 10px 16px;
+                border: 2px solid var(--line);
+                background: var(--soft);
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-size: 0.85rem;
+                font-family: 'Inter', system-ui, sans-serif;
+            }
+            
+            .complexity-btn:hover {
+                border-color: var(--brand);
+                background: rgba(79, 70, 229, 0.04);
+            }
+            
+            .complexity-btn.active {
+                background: var(--brand);
+                color: white;
+                border-color: var(--brand);
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
