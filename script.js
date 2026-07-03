@@ -20,17 +20,23 @@ faqItems.forEach(item => {
     }
 });
 
-// Scroll Animation Observer
+// Scroll Animation Observer - Ensure elements are visible
+document.querySelectorAll(".animate-on-scroll").forEach(el => {
+    el.style.opacity = "1";  // Ensure visible by default
+    el.style.transform = "translateY(0)";
+});
+
+// Animate on scroll
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.05,
+    rootMargin: "0px 0px -100px 0px"
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
+            // Trigger animation
+            entry.target.style.animation = `fadeInOnScroll 0.6s ease-out ${index * 0.05}s forwards`;
         }
     });
 }, observerOptions);
