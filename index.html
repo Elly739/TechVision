@@ -1,78 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechVision | Digital Solutions for Growing Teams</title>
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav" aria-label="Main navigation">
-            <a class="brand" href="index.html"><img src="assets/logo.svg" alt="TechVision"></a>
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-            <div class="nav-links">
-                <a href="index.html" aria-current="page">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="estimator.html">Cost Estimator</a>
-                <a class="nav-cta" href="contact.html">Start a Project</a>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">Nairobi-based technology partner</p>
-                <h1>We build reliable digital products for ambitious businesses.</h1>
-                <p class="hero-copy">TechVision designs, develops, and supports web platforms, mobile apps, cloud systems, and automation tools that help teams move faster.</p>
-                <div class="hero-actions">
-                    <a class="button primary" href="contact.html">Request a Consultation</a>
-                    <a class="button secondary" href="services.html">View Services</a>
+<header class="site-header">
+    <nav class="nav">
+        <a href="index.html" class="brand">
+            <!-- SVG Logo Icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand); margin-right: 10px;">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            TechVision
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="estimator.html">Cost Estimator</a>
+            <a href="contact.html" class="nav-cta">Start a Project</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow"><span class="pulse-dot"></span> Nairobi-based technology partner</p>
+            <h1>We build reliable digital products for ambitious businesses.</h1>
+            <p class="hero-copy">TechVision designs, develops, and supports web platforms, mobile apps, cloud systems, and automation tools that help teams move faster.</p>
+            
+            <div class="hero-actions">
+                <a href="contact.html" class="button primary">Request a Consultation</a>
+                <a href="services.html" class="button secondary">View Services</a>
+            </div>
+
+            <!-- New Trust Bar -->
+            <div class="trust-bar">
+                <span>Trusted by forward-thinking teams</span>
+                <div class="trust-logos">
+                    <div class="logo-placeholder">Acme Corp</div>
+                    <div class="logo-placeholder">Globex</div>
+                    <div class="logo-placeholder">Initech</div>
+                    <div class="logo-placeholder">Umbrella</div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="assets/hero-tech.svg" alt="Modern technology dashboard and cloud workspace">
-                <div class="hero-panel" aria-label="Project delivery highlights">
-                    <div class="metric"><strong>24/7</strong><span>System support</span></div>
-                    <div class="metric"><strong>3x</strong><span>Faster launch cycles</span></div>
-                    <div class="metric"><strong>100%</strong><span>Responsive builds</span></div>
+        </div>
+
+        <!-- CSS-Only Dashboard Mockup Visual -->
+        <div class="hero-visual">
+            <div class="dashboard-mockup">
+                <div class="mockup-header"></div>
+                <div class="mockup-body">
+                    <div class="mockup-sidebar"></div>
+                    <div class="mockup-content">
+                        <div class="mockup-card"></div>
+                        <div class="mockup-card"></div>
+                        <div class="mockup-chart"></div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section">
-            <div class="section-heading">
-                <p class="eyebrow">What we deliver</p>
-                <h2>Technology built around business outcomes.</h2>
+    <!-- METRICS SECTION -->
+    <section class="section metrics-section">
+        <div class="metrics-grid">
+            <div class="metric-item">
+                <strong>24/7</strong>
+                <span>System support</span>
             </div>
-            <div class="service-grid">
-                <article class="card"><img class="service-icon" src="assets/icon-web.svg" alt=""><h3>Web Applications</h3><p>Fast, secure websites and dashboards for customers, staff, and operations.</p></article>
-                <article class="card"><img class="service-icon" src="assets/icon-mobile.svg" alt=""><h3>Mobile Apps</h3><p>Mobile experiences for Android and iOS with clean interfaces and practical workflows.</p></article>
-                <article class="card"><img class="service-icon" src="assets/icon-cloud.svg" alt=""><h3>Cloud Systems</h3><p>Scalable cloud hosting, databases, backups, and deployment workflows.</p></article>
+            <div class="metric-item">
+                <strong>3x</strong>
+                <span>Faster launch cycles</span>
             </div>
-        </section>
+            <div class="metric-item">
+                <strong>100%</strong>
+                <span>Responsive builds</span>
+            </div>
+        </div>
+    </section>
 
-        <section class="split-section">
+    <!-- SERVICES SECTION -->
+    <section class="section">
+        <div class="section-heading">
+            <p class="eyebrow">What we deliver</p>
+            <h2>Technology built around business outcomes.</h2>
+        </div>
+        <div class="service-grid">
+            <div class="card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3>Web Applications</h3>
+                <p>Fast, secure websites and dashboards for customers, staff, and operations.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                </div>
+                <h3>Mobile Apps</h3>
+                <p>Mobile experiences for Android and iOS with clean interfaces and practical workflows.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <h3>Cloud Systems</h3>
+                <p>Scalable cloud hosting, databases, backups, and deployment workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section">
+        <div class="section-heading">
+            <p class="eyebrow">How we work</p>
+            <h2>Clear discovery, focused delivery, long-term support.</h2>
+            <p>We turn business goals into practical technical plans, then ship in stages so you can test, learn, and grow with confidence.</p>
+        </div>
+        <div class="steps">
             <div>
-                <p class="eyebrow">How we work</p>
-                <h2>Clear discovery, focused delivery, long-term support.</h2>
-                <p>We turn business goals into practical technical plans, then ship in stages so you can test, learn, and grow with confidence.</p>
+                <strong>Discover</strong>
+                <span>Understand users, business goals, and technical requirements.</span>
             </div>
-            <div class="steps">
-                <div><strong>Discover</strong><span>Understand users, business goals, and technical requirements.</span></div>
-                <div><strong>Build</strong><span>Design, develop, test, and launch production-ready solutions.</span></div>
-                <div><strong>Improve</strong><span>Monitor performance, support users, and add new capabilities.</span></div>
+            <div>
+                <strong>Build</strong>
+                <span>Design, develop, test, and launch production-ready solutions.</span>
             </div>
-        </section>
-    </main>
+            <div>
+                <strong>Improve</strong>
+                <span>Monitor performance, support users, and add new capabilities.</span>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 TechVision. Nairobi, Kenya.</p>
-        <a href="mailto:info@techvision.com">info@techvision.com</a>
-    </footer>
+<footer class="site-footer">
+    <p>© 2026 TechVision. Nairobi, Kenya.</p>
+    <a href="mailto:info@techvision.com">info@techvision.com</a>
+</footer>
 
-    <script src="script.js"></script>
+<script>
+    // Simple mobile menu toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('is-open');
+    });
+</script>
+
 </body>
 </html>
