@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | TechVision</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="nav">
+        <a href="index.html" class="brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand); margin-right: 10px;">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            TechVision
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html" aria-current="page">Pricing</a>
+            <a href="contact.html" class="nav-cta">Start a Project</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero" style="padding: 60px 0 40px;">
+        <div class="hero-content">
+            <p class="eyebrow">Simple pricing</p>
+            <h1>Transparent costs for quality work.</h1>
+            <p class="hero-copy">No surprises, no hidden fees. Our pricing covers design, development, testing, and launch support. Pick the plan that fits your scope.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="button primary">Get a Custom Quote</a>
+                <a href="#comparison" class="button secondary">Compare Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING CARDS SECTION -->
+    <section class="section">
+        <div class="pricing-grid">
+            <div class="pricing-card animate-on-scroll">
+                <h3 class="pricing-name">Starter</h3>
+                <p class="pricing-desc">Perfect for MVPs and small projects</p>
+                <div class="pricing-price">$5,000</div>
+                <p class="pricing-period">One-time project fee</p>
+                <ul class="pricing-features">
+                    <li>Up to 8 weeks</li>
+                    <li>Single platform (web or mobile)</li>
+                    <li>Basic UI/UX</li>
+                    <li>2 rounds of revisions</li>
+                    <li>1 month support included</li>
+                    <li>Basic SEO optimization</li>
+                    <li>Performance monitoring</li>
+                </ul>
+                <a href="contact.html" class="button secondary pricing-cta">Get Started</a>
+            </div>
+            <div class="pricing-card featured animate-on-scroll">
+                <div class="pricing-badge">Recommended</div>
+                <h3 class="pricing-name">Professional</h3>
+                <p class="pricing-desc">For serious growth-stage projects</p>
+                <div class="pricing-price">$15,000</div>
+                <p class="pricing-period">One-time project fee</p>
+                <ul class="pricing-features">
+                    <li>12-16 weeks</li>
+                    <li>Web + mobile app</li>
+                    <li>Custom UI/UX design</li>
+                    <li>Unlimited revisions</li>
+                    <li>3 months support included</li>
+                    <li>Performance optimization</li>
+                    <li>Advanced analytics integration</li>
+                    <li>Security audit</li>
+                </ul>
+                <a href="contact.html" class="button primary pricing-cta">Start Project</a>
+            </div>
+            <div class="pricing-card animate-on-scroll">
+                <h3 class="pricing-name">Enterprise</h3>
+                <p class="pricing-desc">For complex, scaled solutions</p>
+                <div class="pricing-price">Custom</div>
+                <p class="pricing-period">Based on scope</p>
+                <ul class="pricing-features">
+                    <li>16+ weeks</li>
+                    <li>Multi-platform systems</li>
+                    <li>Advanced architecture</li>
+                    <li>Dedicated team</li>
+                    <li>12 months support</li>
+                    <li>Continuous optimization</li>
+                    <li>Custom integrations</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="contact.html" class="button secondary pricing-cta">Schedule Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE SECTION -->
+    <section class="section" id="comparison">
+        <div class="section-heading">
+            <h2>Feature comparison</h2>
+            <p>All the details to help you choose the right plan.</p>
+        </div>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--line);">
+                        <th style="text-align: left; padding: 16px 0; font-weight: 800; color: var(--ink);">Feature</th>
+                        <th style="text-align: center; padding: 16px 0; font-weight: 700; color: var(--ink);">Starter</th>
+                        <th style="text-align: center; padding: 16px 0; font-weight: 700; color: var(--brand);">Professional</th>
+                        <th style="text-align: center; padding: 16px 0; font-weight: 700; color: var(--ink);">Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Project Duration</td>
+                        <td style="text-align: center; color: var(--muted);">Up to 8 weeks</td>
+                        <td style="text-align: center; color: var(--muted);">12-16 weeks</td>
+                        <td style="text-align: center; color: var(--muted);">16+ weeks</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Web Development</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Mobile App Development</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Custom UI/UX Design</td>
+                        <td style="text-align: center; color: var(--muted);">Basic</td>
+                        <td style="text-align: center; color: var(--success);">✓ Full</td>
+                        <td style="text-align: center; color: var(--success);">✓ Full</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Revision Rounds</td>
+                        <td style="text-align: center; color: var(--muted);">2</td>
+                        <td style="text-align: center; color: var(--success);">Unlimited</td>
+                        <td style="text-align: center; color: var(--success);">Unlimited</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Cloud Setup & Deployment</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Post-Launch Support</td>
+                        <td style="text-align: center; color: var(--muted);">1 month</td>
+                        <td style="text-align: center; color: var(--muted);">3 months</td>
+                        <td style="text-align: center; color: var(--success);">12 months</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Performance Optimization</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">SEO Optimization</td>
+                        <td style="text-align: center; color: var(--success);">Basic</td>
+                        <td style="text-align: center; color: var(--success);">Advanced</td>
+                        <td style="text-align: center; color: var(--success);">Advanced</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Security Audit</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Third-party Integrations</td>
+                        <td style="text-align: center; color: var(--muted);">Basic</td>
+                        <td style="text-align: center; color: var(--success);">Advanced</td>
+                        <td style="text-align: center; color: var(--success);">Custom</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--line);">
+                        <td style="padding: 14px 0; color: var(--ink);">Dedicated Team</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px 0; color: var(--ink);">Priority Support</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--muted);">—</td>
+                        <td style="text-align: center; color: var(--success);">✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ADD-ON SERVICES SECTION -->
+    <section class="section">
+        <div class="section-heading">
+            <h2>Extend your project with add-ons</h2>
+            <p>Need extra capabilities? Enhance your plan with these professional services.</p>
+        </div>
+        <div class="service-grid" style="max-width: 900px; margin: 0 auto;">
+            <div class="card animate-on-scroll">
+                <h3>Ongoing Support</h3>
+                <p><strong>$500-$1,500/month</strong></p>
+                <p style="color: var(--muted);">Bug fixes, feature updates, performance monitoring, and technical consulting.</p>
+            </div>
+            <div class="card animate-on-scroll">
+                <h3>Advanced Analytics</h3>
+                <p><strong>$2,000-$5,000</strong></p>
+                <p style="color: var(--muted);">Custom dashboards, user behavior tracking, and data-driven insights setup.</p>
+            </div>
+            <div class="card animate-on-scroll">
+                <h3>Third-party APIs</h3>
+                <p><strong>$1,500-$4,000</strong></p>
+                <p style="color: var(--muted);">Payment processing, CRM integrations, messaging systems, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section">
+        <div class="section-heading">
+            <h2>Pricing questions?</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you offer custom pricing?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Yes. Our listed prices are starting points. Most projects have unique requirements that may affect cost. Contact us for a custom quote based on your specific needs.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is payment by milestone available?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Absolutely. We offer milestone-based payment plans for larger projects. Typically 30% upfront, 40% at midpoint, and 30% at completion. We're flexible and can discuss options.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What about maintenance after launch?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">After your launch support period ends, we offer flexible retainer packages. Most clients choose $500-$1,500/month for ongoing updates and monitoring. You're never locked in.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I upgrade my plan mid-project?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Yes. If you need more features or extended scope, we can upgrade your plan. The additional cost is prorated based on your project progress.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you offer discounts?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">We offer discounts for longer retainer commitments (6+ months) and multi-project partnerships. Contact our team to discuss your specific situation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's included in post-launch support?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-text">Post-launch support includes bug fixes, performance monitoring, minor feature adjustments, security patches, and technical consulting. Major new features are typically billed separately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section" style="text-align: center;">
+        <div class="section-heading" style="max-width: 100%;">
+            <h2>Ready to bring your vision to life?</h2>
+            <p>Let's discuss your project and find the perfect plan.</p>
+        </div>
+        <div class="hero-actions" style="justify-content: center;">
+            <a href="contact.html" class="button primary">Request a Consultation</a>
+            <a href="mailto:info@techvision.com" class="button secondary">Email Us</a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 TechVision. Nairobi, Kenya.</p>
+    <a href="mailto:info@techvision.com">info@techvision.com</a>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+// Mobile Menu Toggle
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
@@ -8,6 +9,37 @@ if (navToggle && navLinks) {
     });
 }
 
+// FAQ Accordion Toggle
+const faqItems = document.querySelectorAll(".faq-item");
+faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    if (question) {
+        question.addEventListener("click", () => {
+            item.classList.toggle("open");
+        });
+    }
+});
+
+// Scroll Animation Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll(".animate-on-scroll").forEach(el => {
+    observer.observe(el);
+});
+
+// Form Submission
 const projectForm = document.querySelector("#projectForm");
 const formMessage = document.querySelector("#formMessage");
 
@@ -39,5 +71,18 @@ if (projectForm && formMessage) {
 
         projectForm.reset();
         formMessage.textContent = "Thank you. Your request has been saved locally and is ready for backend integration.";
+    });
+}
+
+// Newsletter Form Submission
+const newsletterForm = document.querySelector(".newsletter-form");
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const input = newsletterForm.querySelector(".newsletter-input");
+        if (input && input.value.trim()) {
+            alert("Thank you for subscribing! We'll be in touch soon.");
+            input.value = "";
+        }
     });
 }
