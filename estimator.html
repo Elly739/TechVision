@@ -151,10 +151,12 @@
                 return;
             }
 
-            const baseMin = pages * complexity * 500;
-            const baseMax = pages * complexity * 1000;
-            const featureMin = features * 1000;
-            const featureMax = features * 2000;
+            // Calculate in KSH (Kenyan Shillings) - base rates per page per complexity
+            // 60,000 KSH - 120,000 KSH per page depending on complexity
+            const baseMin = pages * complexity * 60000;  // 60,000 KSH per page
+            const baseMax = pages * complexity * 120000; // 120,000 KSH per page
+            const featureMin = features * 120000;        // 120,000 KSH per feature
+            const featureMax = features * 240000;        // 240,000 KSH per feature
 
             const minEstimate = baseMin + featureMin;
             const maxEstimate = baseMax + featureMax;
@@ -162,9 +164,9 @@
 
             // Determine project size
             let size = 'Small';
-            if (avgEstimate > 25000) size = 'Enterprise';
-            else if (avgEstimate > 15000) size = 'Large';
-            else if (avgEstimate > 8000) size = 'Medium';
+            if (avgEstimate > 3000000) size = 'Enterprise';
+            else if (avgEstimate > 1800000) size = 'Large';
+            else if (avgEstimate > 960000) size = 'Medium';
 
             // Estimate timeline
             let timeline = '4-6 weeks';
@@ -172,7 +174,7 @@
             else if (complexity >= 3) timeline = '8-12 weeks';
             else if (complexity >= 2) timeline = '6-8 weeks';
 
-            document.getElementById('estimateValue').textContent = '$' + avgEstimate.toLocaleString();
+            document.getElementById('estimateValue').textContent = 'KSH ' + avgEstimate.toLocaleString();
             document.getElementById('estimateSize').textContent = size;
             document.getElementById('estimateTimeline').textContent = timeline;
             document.getElementById('estimateResult').style.display = 'block';
