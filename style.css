@@ -439,8 +439,18 @@ p {
 }
 
 .section-heading {
-    max-width: 720px;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 16px auto 20px;
+}
+
+.section-heading p {
+    max-width: 580px;
+    color: var(--muted);
+    margin: 0 auto;
 }
 
 .section-heading p {
@@ -805,9 +815,9 @@ p {
 /* --- FAQ SECTION --- */
 .faq-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 24px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -815,19 +825,20 @@ p {
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: 12px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
 
 .faq-item.open {
-    border-color: rgba(79, 70, 229, 0.2);
-    box-shadow: var(--shadow);
+    border-color: rgba(79, 70, 229, 0.3);
+    box-shadow: var(--shadow-lg), var(--glow);
+    background: var(--paper);
 }
 
 .faq-question {
     width: 100%;
-    padding: 20px 24px;
+    padding: 24px;
     background: transparent;
     border: none;
     text-align: left;
@@ -839,8 +850,13 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 16px;
     transition: color 0.2s ease;
+    border-bottom: 1px solid var(--line);
+}
+
+.faq-item.open .faq-question {
+    border-bottom: none;
 }
 
 .faq-question:hover {
@@ -848,36 +864,42 @@ p {
 }
 
 .faq-toggle {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--brand);
+    color: white;
+    background: var(--brand);
     font-weight: 800;
+    font-size: 1.2rem;
     flex-shrink: 0;
     transition: transform 0.3s ease;
+    border-radius: 50%;
 }
 
 .faq-item.open .faq-toggle {
-    transform: rotate(180deg);
+    transform: rotate(45deg);
+    background: rgba(79, 70, 229, 0.8);
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.4s ease;
 }
 
 .faq-item.open .faq-answer {
-    max-height: 500px;
-    padding: 0 24px 20px;
+    max-height: 600px;
+    padding: 24px;
+    border-top: 1px solid var(--line);
 }
 
 .faq-answer-text {
     color: var(--muted);
-    line-height: 1.7;
+    line-height: 1.8;
     margin: 0;
+    font-size: 0.95rem;
 }
 
 /* --- MISSION/VISION CARDS --- */
@@ -1191,6 +1213,54 @@ p {
     background: white;
     border-color: var(--brand);
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* --- CONTACT FORM LAYOUT --- */
+.project-form {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 48px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.project-form h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 24px 0;
+    display: grid;
+    gap: 12px;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--brand);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--brand);
 }
 
 /* --- RESULT CARD --- */
