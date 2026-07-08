@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Tech company dashboard workspace</title>
+  <desc id="desc">A modern technology workspace with dashboards, cloud systems, and connected data cards.</desc>
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" rx="40" fill="#f8fafc"/>
+  <circle cx="778" cy="132" r="86" fill="#60a5fa" opacity=".6"/>
+  <circle cx="162" cy="600" r="118" fill="#2563eb" opacity=".1"/>
+  <rect x="120" y="118" width="720" height="444" rx="28" fill="white" stroke="#e2e8f0" stroke-width="4"/>
+  <rect x="120" y="118" width="720" height="72" rx="28" fill="url(#blueGrad)"/>
+  <circle cx="168" cy="154" r="10" fill="url(#orangeGrad)"/>
+  <circle cx="204" cy="154" r="10" fill="#93c5fd"/>
+  <circle cx="240" cy="154" r="10" fill="#ffffff"/>
+  <g opacity="0.8">
+    <rect x="168" y="236" width="228" height="134" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
+    <rect x="436" y="236" width="356" height="134" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
+    <rect x="168" y="412" width="624" height="98" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
+  </g>
+  <path d="M198 326l42-42 40 28 58-58" fill="none" stroke="#2563eb" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="474" y="276" width="76" height="58" rx="10" fill="#2563eb"/>
+  <rect x="582" y="258" width="76" height="76" rx="10" fill="url(#orangeGrad)"/>
+  <rect x="690" y="292" width="76" height="42" rx="10" fill="#1e40af"/>
+  <rect x="204" y="448" width="126" height="18" rx="9" fill="#1e40af"/>
+  <rect x="356" y="448" width="250" height="18" rx="9" fill="#2563eb"/>
+  <rect x="632" y="448" width="124" height="18" rx="9" fill="url(#orangeGrad)"/>
+  <rect x="204" y="480" width="552" height="12" rx="6" fill="#cbd5e1"/>
+  <g transform="translate(548 596)">
+    <path d="M0-48c34 48 114 48 148 0 36-5 68 22 68 58 0 32-26 58-58 58H-18c-32 0-58-26-58-58 0-35 31-62 66-58z" fill="#2563eb"/>
+    <path d="M28 54h50" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+    <path d="M50 36v58" stroke="url(#orangeGrad)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

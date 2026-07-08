@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-labelledby="title desc">
+  <title id="title">TechVision logo</title>
+  <desc id="desc">A compact TechVision brand mark with company name.</desc>
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#logoGrad)"/>
+  <path d="M18 20h28v7H35v24h-7V27H18z" fill="#fff"/>
+  <path d="M40 20h8l-12 31h-7z" fill="url(#accentGrad)"/>
+  <path d="M80 18h44v8h-17v35h-10V26H80z" fill="#1e40af"/>
+  <path d="M130 18h36v8h-26v9h23v8h-23v10h27v8h-37z" fill="#1e40af"/>
+  <path d="M174 18h10v35h24v8h-34z" fill="url(#logoGrad)"/>
+</svg>

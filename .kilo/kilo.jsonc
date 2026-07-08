@@ -1,0 +1,7 @@
+{
+<<<<<<< HEAD
+  "$schema": "https://app.kilo.ai/config.json",
+=======
+>>>>>>> 848f757a08096f42b60fe47a4d5b61f6699bcb05
+  "snapshot": false
+}

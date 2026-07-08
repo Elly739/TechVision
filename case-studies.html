@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | TechVision</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="nav">
+        <a href="index.html" class="brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand); margin-right: 10px;">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            TechVision
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html" aria-current="page">Case Studies</a>
+            <a href="contact.html" class="nav-cta">Start a Project</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero" style="padding: 60px 0 40px;">
+        <div class="hero-content">
+            <p class="eyebrow">Our work</p>
+            <h1>Real projects. Real results. Real impact.</h1>
+            <p class="hero-copy">See how we've helped ambitious businesses solve complex problems, accelerate growth, and unlock new opportunities.</p>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES GRID -->
+    <section class="section">
+        <div style="display: grid; gap: 48px;">
+            <!-- Case Study 1 -->
+            <div class="animate-on-scroll" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
+                <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.08)); border-radius: 16px; padding: 80px; display: flex; align-items: center; justify-content: center; min-height: 400px; font-size: 5rem;">📊</div>
+                <div>
+                    <span class="case-study-tag">SaaS Platform</span>
+                    <h2 style="margin-top: 16px;">Enterprise Analytics Dashboard</h2>
+                    <p style="color: var(--muted); font-size: 1.1rem; margin: 20px 0; line-height: 1.7;">We helped a fast-growing FinTech startup build a real-time analytics platform processing 500K+ data points daily. The dashboard gives customers actionable insights while maintaining 99.9% uptime across 50+ concurrent users.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">The Challenge</h4>
+                    <p style="color: var(--muted); margin-bottom: 16px;">The client needed a platform that could handle complex financial data aggregation while providing an intuitive interface for non-technical users. Existing solutions were expensive and lacked customization.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">What We Built</h4>
+                    <p style="color: var(--muted); margin-bottom: 16px;">A custom web application with real-time data processing, advanced visualization, and role-based access control. The system integrates with 8+ data sources and provides instant reporting.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">The Results</h4>
+                    <div class="case-study-result" style="border: none; padding: 0; margin-top: 16px;">
+                        <div class="result-item">
+                            <span class="result-number">50+</span>
+                            <span class="result-label">Active Users</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">99.9%</span>
+                            <span class="result-label">Uptime SLA</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">3x</span>
+                            <span class="result-label">Revenue Growth</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--muted); margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); font-style: italic;">"TechVision understood our complex requirements and delivered something that exceeded expectations. Their expertise in scalable architecture was crucial."</p>
+                    <p style="color: var(--muted); margin-top: 8px; font-weight: 600;">— Sarah Njeri, CEO, FinFlow</p>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="animate-on-scroll" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
+                <div>
+                    <span class="case-study-tag">Mobile App</span>
+                    <h2 style="margin-top: 16px;">Consumer Marketplace App</h2>
+                    <p style="color: var(--muted); font-size: 1.1rem; margin: 20px 0; line-height: 1.7;">We launched a cross-platform mobile app that connects local artisans with customers. In 6 months, the app reached 100K+ downloads with a 4.7-star rating across both iOS and Android.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">The Challenge</h4>
+                    <p style="color: var(--muted); margin-bottom: 16px;">The team had a compelling business idea but no technical expertise. They needed a production-ready app that could scale from launch to thousands of users, with features like payments, notifications, and reviews.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">What We Built</h4>
+                    <p style="color: var(--muted); margin-bottom: 16px;">A native iOS and Android app with a Node.js backend, PostgreSQL database, and third-party payment integration. The app includes push notifications, real-time messaging, and sophisticated search and filtering.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">The Results</h4>
+                    <div class="case-study-result" style="border: none; padding: 0; margin-top: 16px;">
+                        <div class="result-item">
+                            <span class="result-number">100K+</span>
+                            <span class="result-label">Downloads</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">4.7★</span>
+                            <span class="result-label">App Rating</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">$2M</span>
+                            <span class="result-label">GMV First Year</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--muted); margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); font-style: italic;">"The team moved fast without sacrificing quality. We launched on schedule and have had zero major production issues. Highly recommended."</p>
+                    <p style="color: var(--muted); margin-top: 8px; font-weight: 600;">— Marcus Williams, Product Manager, Apex</p>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.08)); border-radius: 16px; padding: 80px; display: flex; align-items: center; justify-content: center; min-height: 400px; font-size: 5rem;">📱</div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="animate-on-scroll" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
+                <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.08)); border-radius: 16px; padding: 80px; display: flex; align-items: center; justify-content: center; min-height: 400px; font-size: 5rem;">☁️</div>
+                <div>
+                    <span class="case-study-tag">Cloud Systems</span>
+                    <h2 style="margin-top: 16px;">Serverless Infrastructure Migration</h2>
+                    <p style="color: var(--muted); font-size: 1.1rem; margin: 20px 0; line-height: 1.7;">We migrated a legacy e-commerce platform to a scalable cloud infrastructure, reducing infrastructure costs by 60% while improving performance and reliability.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">The Challenge</h4>
+                    <p style="color: var(--muted); margin-bottom: 16px;">The client's monolithic application running on aging servers was hitting capacity limits. They needed a modern, scalable architecture that could handle 10x traffic growth without proportional cost increases.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">What We Built</h4>
+                    <p style="color: var(--muted); margin-bottom: 16px;">We redesigned the architecture using serverless components (AWS Lambda, DynamoDB, CloudFront), containerized services, and implemented CI/CD pipelines. The migration was completed in phases with zero downtime.</p>
+                    
+                    <h4 style="margin: 28px 0 12px; font-weight: 700; color: var(--ink);">The Results</h4>
+                    <div class="case-study-result" style="border: none; padding: 0; margin-top: 16px;">
+                        <div class="result-item">
+                            <span class="result-number">60%</span>
+                            <span class="result-label">Cost Reduction</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">10x</span>
+                            <span class="result-label">Capacity Headroom</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-number">5ms</span>
+                            <span class="result-label">Avg Response</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--muted); margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); font-style: italic;">"The team's deep cloud expertise made the migration smooth. We're now paying less and getting better performance. Great partnership."</p>
+                    <p style="color: var(--muted); margin-top: 8px; font-weight: 600;">— Amara Kipchoge, Founder, LocalHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="section">
+        <div class="metrics-grid" style="text-align: center;">
+            <div class="metric-item">
+                <strong>15+</strong>
+                <span>Completed Projects</span>
+            </div>
+            <div class="metric-item">
+                <strong>$50M+</strong>
+                <span>Combined Client Revenue</span>
+            </div>
+            <div class="metric-item">
+                <strong>98%</strong>
+                <span>Client Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section" style="text-align: center;">
+        <div class="section-heading" style="max-width: 100%;">
+            <h2>Ready to create your success story?</h2>
+            <p>Let's discuss how we can help your business achieve ambitious goals.</p>
+        </div>
+        <div class="hero-actions" style="justify-content: center;">
+            <a href="contact.html" class="button primary">Start Your Project</a>
+            <a href="pricing.html" class="button secondary">View Pricing</a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 TechVision. Nairobi, Kenya.</p>
+    <a href="mailto:info@techvision.com">info@techvision.com</a>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
