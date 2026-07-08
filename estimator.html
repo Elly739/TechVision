@@ -96,17 +96,39 @@
 
             <!-- RESULT CARD -->
             <div id="estimateResult" class="result-card animate-on-scroll" style="display: none; margin-top: 40px;">
-                <h2>Your Estimate</h2>
-                <div class="result-price" id="estimateValue" style="margin: 20px 0 30px;">$0</div>
-                <p style="color: var(--muted); margin: 0 0 28px; font-size: 1.05rem;">This is a preliminary estimate based on TechVision's standard pricing model.</p>
+                <h2>Your Project Estimate</h2>
+                <div class="result-price" id="estimateValue" style="margin: 20px 0 10px;">KSH 0</div>
+                
+                <!-- Feature Description -->
+                <div id="featureDescription" style="background: rgba(79, 70, 229, 0.05); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 20px 0; text-align: left;">
+                    <p style="margin: 0; color: var(--ink); font-weight: 600; font-size: 0.9rem;">Your Features:</p>
+                    <p style="margin: 8px 0 0; color: var(--muted); font-size: 0.9rem;" id="featureDetails"></p>
+                </div>
+
+                <!-- Complexity Description -->
+                <div id="complexityDescription" style="background: rgba(6, 182, 212, 0.05); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 20px 0; text-align: left;">
+                    <p style="margin: 0; color: var(--ink); font-weight: 600; font-size: 0.9rem;">Project Scope:</p>
+                    <p style="margin: 8px 0 0; color: var(--muted); font-size: 0.9rem;" id="complexityDetails"></p>
+                </div>
+
+                <!-- Recommendation Card -->
+                <div id="recommendationCard" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(6, 182, 212, 0.05)); border: 2px solid var(--brand); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center;">
+                    <p style="margin: 0 0 8px; color: var(--brand); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">Recommended Package</p>
+                    <p style="margin: 0; color: var(--ink); font-size: 1.2rem; font-weight: 800;" id="recommendedPackage">Professional</p>
+                    <p style="margin: 8px 0 0; color: var(--muted); font-size: 0.9rem;" id="packageReason"></p>
+                </div>
+
+                <!-- Breakdown -->
                 <div class="result-breakdown">
                     <div class="breakdown-item">
-                        <div class="breakdown-label">Estimated Timeline</div>
+                        <div class="breakdown-label">Timeline</div>
                         <div class="breakdown-value" id="estimateTimeline">8-12 weeks</div>
+                        <p style="margin: 8px 0 0; color: var(--muted); font-size: 0.8rem;" id="timelineReason"></p>
                     </div>
                     <div class="breakdown-item">
                         <div class="breakdown-label">Project Size</div>
                         <div class="breakdown-value" id="estimateSize">Medium</div>
+                        <p style="margin: 8px 0 0; color: var(--muted); font-size: 0.8rem;" id="sizeReason"></p>
                     </div>
                     <div class="breakdown-item">
                         <div class="breakdown-label">Next Step</div>
@@ -151,32 +173,135 @@
                 return;
             }
 
-            // Calculate in KSH (Kenyan Shillings) - base rates per page per complexity
-            // 60,000 KSH - 120,000 KSH per page depending on complexity
-            const baseMin = pages * complexity * 60000;  // 60,000 KSH per page
-            const baseMax = pages * complexity * 120000; // 120,000 KSH per page
-            const featureMin = features * 120000;        // 120,000 KSH per feature
-            const featureMax = features * 240000;        // 240,000 KSH per feature
+            // Calculate in KSH (Kenyan Shillings)
+            const baseMin = pages * complexity * 60000;
+            const baseMax = pages * complexity * 120000;
+            const featureMin = features * 120000;
+            const featureMax = features * 240000;
 
             const minEstimate = baseMin + featureMin;
             const maxEstimate = baseMax + featureMax;
             const avgEstimate = Math.round((minEstimate + maxEstimate) / 2);
 
-            // Determine project size
-            let size = 'Small';
-            if (avgEstimate > 3000000) size = 'Enterprise';
-            else if (avgEstimate > 1800000) size = 'Large';
-            else if (avgEstimate > 960000) size = 'Medium';
+            // ===== FEATURE DESCRIPTION (Switch Statement) =====
+            let featureDesc, featureName;
+            switch(features) {
+                case 5:
+                    featureName = 'Basic';
+                    featureDesc = 'Static pages, contact forms, and basic structure. Perfect for brochure sites.';
+                    break;
+                case 10:
+                    featureName = 'Standard';
+                    featureDesc = 'User authentication, database integration, and content management. Ideal for applications.';
+                    break;
+                case 15:
+                    featureName = 'Advanced';
+                    featureDesc = 'Third-party API integrations, real-time updates, and analytics. Great for complex workflows.';
+                    break;
+                case 20:
+                    featureName = 'Premium';
+                    featureDesc = 'Payment processing, subscription management, and advanced real-time features. Enterprise-ready.';
+                    break;
+                default:
+                    featureName = 'Custom';
+                    featureDesc = 'Tailored features for your specific needs.';
+            }
 
-            // Estimate timeline
-            let timeline = '4-6 weeks';
-            if (complexity >= 4) timeline = '12-16 weeks';
-            else if (complexity >= 3) timeline = '8-12 weeks';
-            else if (complexity >= 2) timeline = '6-8 weeks';
+            // ===== COMPLEXITY DESCRIPTION (Switch Statement) =====
+            let complexityDesc, complexityLabel;
+            switch(complexity) {
+                case 1:
+                    complexityLabel = 'Basic';
+                    complexityDesc = `${pages} simple pages with straightforward structure. No custom functionality.`;
+                    break;
+                case 2:
+                    complexityLabel = 'Simple';
+                    complexityDesc = `${pages} pages with light interaction and simple workflows.`;
+                    break;
+                case 3:
+                    complexityLabel = 'Medium';
+                    complexityDesc = `${pages} pages with moderate complexity, custom components, and workflows.`;
+                    break;
+                case 4:
+                    complexityLabel = 'Complex';
+                    complexityDesc = `${pages} pages with advanced interactions, custom architecture, and integrations.`;
+                    break;
+                case 5:
+                    complexityLabel = 'Expert';
+                    complexityDesc = `${pages} pages with cutting-edge features, optimized performance, and scalability.`;
+                    break;
+                default:
+                    complexityLabel = 'Custom';
+                    complexityDesc = 'Project complexity will be assessed during discovery.';
+            }
 
+            // ===== PROJECT SIZE & RECOMMENDATION (If/Else If) =====
+            let size, sizeReason, recommendedPackage, packageReason;
+            
+            if (avgEstimate < 600000) {
+                size = 'Small';
+                sizeReason = 'Quick turnaround project';
+                recommendedPackage = 'Starter Package';
+                packageReason = 'Perfect for your budget. Includes design, development, and basic support.';
+            } else if (avgEstimate < 1800000) {
+                size = 'Medium';
+                sizeReason = 'Standard project scope';
+                recommendedPackage = 'Professional Package';
+                packageReason = 'Best value for your needs. Full development team, advanced features, and 3 months support.';
+            } else if (avgEstimate < 3000000) {
+                size = 'Large';
+                sizeReason = 'Substantial project scope';
+                recommendedPackage = 'Professional Package';
+                packageReason = 'Dedicated team for your project. Custom solutions and extended support.';
+            } else {
+                size = 'Enterprise';
+                sizeReason = 'Complex, full-featured project';
+                recommendedPackage = 'Enterprise Package';
+                packageReason = 'Schedule a consultation with our leadership team for custom pricing and full service.';
+            }
+
+            // ===== TIMELINE RECOMMENDATION (Switch with Case Ranges) =====
+            let timeline, timelineReason;
+            switch(true) {
+                case complexity <= 1:
+                    timeline = '4-6 weeks';
+                    timelineReason = 'Fast-track for simple projects';
+                    break;
+                case complexity <= 2:
+                    timeline = '6-8 weeks';
+                    timelineReason = 'Standard development cycle';
+                    break;
+                case complexity <= 3:
+                    timeline = '8-12 weeks';
+                    timelineReason = 'Includes design, development, QA';
+                    break;
+                case complexity <= 4:
+                    timeline = '12-16 weeks';
+                    timelineReason = 'Complex features and integrations';
+                    break;
+                default:
+                    timeline = '16-20 weeks';
+                    timelineReason = 'Expert-level development and optimization';
+            }
+
+            // ===== UPDATE UI WITH ALL RECOMMENDATIONS =====
             document.getElementById('estimateValue').textContent = 'KSH ' + avgEstimate.toLocaleString();
             document.getElementById('estimateSize').textContent = size;
             document.getElementById('estimateTimeline').textContent = timeline;
+            document.getElementById('sizeReason').textContent = sizeReason;
+            document.getElementById('timelineReason').textContent = timelineReason;
+            
+            // Update feature description
+            document.getElementById('featureDetails').textContent = `${featureName} - ${featureDesc}`;
+            
+            // Update complexity description
+            document.getElementById('complexityDetails').textContent = complexityDesc;
+            
+            // Update package recommendation
+            document.getElementById('recommendedPackage').textContent = recommendedPackage;
+            document.getElementById('packageReason').textContent = packageReason;
+            
+            // Show result
             document.getElementById('estimateResult').style.display = 'block';
             
             // Scroll to result

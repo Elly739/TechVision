@@ -1315,6 +1315,38 @@ fieldset input[type="checkbox"] {
     color: var(--brand);
 }
 
+/* --- RECOMMENDATION CARDS --- */
+.recommendation-box {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(6, 182, 212, 0.05));
+    border: 2px solid var(--brand);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.recommendation-box p:first-child {
+    color: var(--brand);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin: 0 0 8px;
+}
+
+.recommendation-box p:nth-child(2) {
+    color: var(--ink);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.recommendation-box p:nth-child(3) {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 8px 0 0;
+}
+
 /* --- NEWSLETTER SECTION --- */
 .newsletter-box {
     background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(6, 182, 212, 0.08));
