@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrations - TechVision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7V12C2 18.627 7.373 24 12 24C16.627 24 22 18.627 22 12V7L12 2Z" fill="url(#gradient)"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>TechVision</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="integrations.html" class="active">Integrations</a>
+                <a href="pricing.html">Pricing</a>
+            </nav>
+            <a href="contact.html" class="button primary">Start a Project</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="integrations-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="section-label">SEAMLESS INTEGRATIONS</p>
+                    <h1>Connect With Your Favorite Tools</h1>
+                    <p class="hero-subtitle">We integrate with 50+ industry-leading platforms to streamline your workflows and maximize productivity.</p>
+                    <div class="search-container">
+                        <input type="text" id="toolSearch" placeholder="Search integrations..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTER TABS -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-category="all">All Tools</button>
+                    <button class="filter-btn" data-category="crm">CRM</button>
+                    <button class="filter-btn" data-category="project">Project Management</button>
+                    <button class="filter-btn" data-category="communication">Communication</button>
+                    <button class="filter-btn" data-category="payments">Payments</button>
+                    <button class="filter-btn" data-category="marketing">Marketing</button>
+                    <button class="filter-btn" data-category="automation">Automation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLS GRID -->
+        <section class="tools-showcase">
+            <div class="container">
+                <div class="tools-grid" id="toolsGrid">
+                    <!-- CRM Tools -->
+                    <div class="tool-card" data-category="crm" data-name="Salesforce">
+                        <div class="tool-icon">
+                            <img src="assets/tool-salesforce.png" alt="Salesforce">
+                        </div>
+                        <h3>Salesforce</h3>
+                        <p class="tool-category">CRM</p>
+                        <p class="tool-description">Enterprise-grade customer relationship management for large teams.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <div class="tool-card" data-category="crm" data-name="HubSpot">
+                        <div class="tool-icon">
+                            <img src="assets/tool-hubspot.png" alt="HubSpot">
+                        </div>
+                        <h3>HubSpot</h3>
+                        <p class="tool-category">CRM</p>
+                        <p class="tool-description">All-in-one marketing, sales, and service platform for growing businesses.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <!-- Project Management -->
+                    <div class="tool-card" data-category="project" data-name="Asana">
+                        <div class="tool-icon">
+                            <img src="assets/tool-asana.png" alt="Asana">
+                        </div>
+                        <h3>Asana</h3>
+                        <p class="tool-category">Project Management</p>
+                        <p class="tool-description">Powerful task and project management for teams of any size.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <div class="tool-card" data-category="project" data-name="Monday.com">
+                        <div class="tool-icon">
+                            <img src="assets/tool-monday.png" alt="Monday.com">
+                        </div>
+                        <h3>Monday.com</h3>
+                        <p class="tool-category">Project Management</p>
+                        <p class="tool-description">Flexible work OS for managing projects and workflows.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <div class="tool-card" data-category="project" data-name="Jira">
+                        <div class="tool-icon">
+                            <img src="assets/tool-jira.png" alt="Jira">
+                        </div>
+                        <h3>Jira</h3>
+                        <p class="tool-category">Project Management</p>
+                        <p class="tool-description">Agile project management for software development teams.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <!-- Communication -->
+                    <div class="tool-card" data-category="communication" data-name="Slack">
+                        <div class="tool-icon">
+                            <img src="assets/tool-slack.png" alt="Slack">
+                        </div>
+                        <h3>Slack</h3>
+                        <p class="tool-category">Communication</p>
+                        <p class="tool-description">Team messaging and collaboration platform trusted by millions.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <!-- Payments & Billing -->
+                    <div class="tool-card" data-category="payments" data-name="Stripe">
+                        <div class="tool-icon">
+                            <img src="assets/tool-stripe.png" alt="Stripe">
+                        </div>
+                        <h3>Stripe</h3>
+                        <p class="tool-category">Payments</p>
+                        <p class="tool-description">Secure payment processing for web and mobile applications.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <!-- Marketing & Analytics -->
+                    <div class="tool-card" data-category="marketing" data-name="Mailchimp">
+                        <div class="tool-icon">
+                            <img src="assets/tool-mailchimp.png" alt="Mailchimp">
+                        </div>
+                        <h3>Mailchimp</h3>
+                        <p class="tool-category">Marketing</p>
+                        <p class="tool-description">Email marketing platform with automation and analytics.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <div class="tool-card" data-category="marketing" data-name="Google Analytics">
+                        <div class="tool-icon">
+                            <img src="assets/tool-analytics.png" alt="Analytics">
+                        </div>
+                        <h3>Google Analytics</h3>
+                        <p class="tool-category">Marketing</p>
+                        <p class="tool-description">Track user behavior and measure website performance.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <!-- Automation & Workflow -->
+                    <div class="tool-card" data-category="automation" data-name="Zapier">
+                        <div class="tool-icon">
+                            <img src="assets/tool-zapier.png" alt="Zapier">
+                        </div>
+                        <h3>Zapier</h3>
+                        <p class="tool-category">Automation</p>
+                        <p class="tool-description">Connect apps and automate repetitive tasks without coding.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+
+                    <div class="tool-card" data-category="automation" data-name="Airtable">
+                        <div class="tool-icon">
+                            <img src="assets/tool-airtable.png" alt="Airtable">
+                        </div>
+                        <h3>Airtable</h3>
+                        <p class="tool-category">Automation</p>
+                        <p class="tool-description">Database and collaboration platform for organizing information.</p>
+                        <a href="#" class="tool-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="integrations-cta">
+            <div class="container">
+                <h2>Don't See Your Tool?</h2>
+                <p>We can integrate with virtually any platform. Contact us to discuss your specific needs.</p>
+                <a href="contact.html" class="button primary large">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p>&copy; 2026 TechVision. Nairobi, Kenya.</p>
+        </div>
+        <div>
+            <a href="mailto:info@techvision.com">info@techvision.com</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -21,7 +21,93 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+
+    // Initialize Integrations Filters
+    initializeIntegrationFilters();
 });
+
+// Integrations Filter and Search Functionality
+function initializeIntegrationFilters() {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const searchInput = document.getElementById("toolSearch");
+    const toolCards = document.querySelectorAll(".tool-card");
+
+    if (!filterBtns.length) return; // Exit if not on integrations page
+
+    // Filter by category
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const category = btn.getAttribute("data-category");
+            
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            // Filter cards
+            filterCards(category, searchInput ? searchInput.value : "");
+        });
+    });
+
+    // Search functionality
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const activeCategory = document.querySelector(".filter-btn.active")
+                .getAttribute("data-category");
+            
+            filterCards(activeCategory, searchTerm);
+        });
+    }
+}
+
+function filterCards(category, searchTerm) {
+    const toolCards = document.querySelectorAll(".tool-card");
+    let visibleCount = 0;
+
+    toolCards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+        const toolName = card.getAttribute("data-name").toLowerCase();
+
+        // Check if card matches category and search term
+        const matchCategory = category === "all" || cardCategory === category;
+        const matchSearch = toolName.includes(searchTerm);
+
+        if (matchCategory && matchSearch) {
+            card.style.display = "block";
+            setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }, 10);
+            visibleCount++;
+        } else {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(10px)";
+            setTimeout(() => {
+                card.style.display = "none";
+            }, 300);
+        }
+    });
+
+    // Show "no results" message if needed
+    const grid = document.getElementById("toolsGrid");
+    if (visibleCount === 0 && grid) {
+        if (!document.getElementById("noResults")) {
+            const noResults = document.createElement("div");
+            noResults.id = "noResults";
+            noResults.style.cssText = `
+                grid-column: 1 / -1;
+                text-align: center;
+                padding: 40px 20px;
+                color: var(--muted);
+                font-size: 1.1rem;
+            `;
+            noResults.textContent = "No tools found matching your search.";
+            grid.appendChild(noResults);
+        }
+    } else if (document.getElementById("noResults")) {
+        document.getElementById("noResults").remove();
+    }
+}
 
 // Scroll Animation Observer - Ensure elements are visible
 document.querySelectorAll(".animate-on-scroll").forEach(el => {
