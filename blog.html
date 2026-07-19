@@ -38,10 +38,13 @@
     <!-- FEATURED ARTICLE -->
     <section class="featured-article-section">
         <div class="container">
-            <article class="featured-article">
-                <div class="featured-content">
+            <div class="featured-blog-card">
+                <div class="featured-blog-image">
+                    <img src="assets/blog-nextjs.png" alt="Next.js 16 development workspace">
+                </div>
+                <div class="featured-blog-content">
                     <div class="article-meta">
-                        <span class="category featured-category">Web Development</span>
+                        <span class="featured-category">Web Development</span>
                         <span class="publish-date">July 18, 2026</span>
                     </div>
                     <h2>Building High-Performance Web Applications with Next.js 16</h2>
@@ -91,96 +94,145 @@
                         </div>
                     </div>
                 </div>
-                <div class="featured-image">
-                    <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(6, 182, 212, 0.15)); border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
-                        <svg viewBox="0 0 400 400" style="width: 60%; height: auto; opacity: 0.3;">
-                            <defs>
-                                <linearGradient id="nextjsgradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                            <rect x="30" y="30" width="340" height="340" rx="20" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
-                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
-                            <circle cx="200" cy="100" r="30" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
-                            <circle cx="300" cy="100" r="30" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
-                            <rect x="50" y="160" width="300" height="180" rx="10" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
-                        </svg>
-                    </div>
-                </div>
-            </article>
+            </div>
         </div>
     </section>
 
     <!-- ALL ARTICLES GRID -->
     <section class="all-articles-section">
         <div class="container">
-            <h2 style="margin-bottom: 48px; text-align: center;">More Articles</h2>
+            <h2 style="margin-bottom: 48px; text-align: center;">More Insights</h2>
             <div class="articles-grid">
-                <article class="article-card animate-on-scroll">
-                    <div class="article-category">Cloud Architecture</div>
-                    <h3>Scaling Your Application: Serverless vs Containers</h3>
-                    <p>Choosing between serverless and containerized applications depends on your workload. We compare AWS Lambda, Google Cloud Functions, and Kubernetes with real metrics and use cases from our production systems.</p>
-                    <div class="article-details">
-                        <span class="read-time">10 min read</span>
-                        <span class="publish-date">July 12, 2026</span>
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image">
+                        <img src="assets/blog-serverless.png" alt="Cloud architecture comparison">
                     </div>
-                    <a href="#" class="read-link">Read Article →</a>
+                    <div class="blog-card-content">
+                        <div class="card-meta">
+                            <span class="article-category">Cloud Architecture</span>
+                            <span class="publish-date">July 12, 2026</span>
+                        </div>
+                        <h3>Scaling Your Application: Serverless vs Containers</h3>
+                        <p>Choosing between serverless and containerized applications depends on your workload. We compare AWS Lambda, Google Cloud Functions, and Kubernetes with real metrics and use cases from our production systems.</p>
+                        <div class="card-footer">
+                            <span class="read-time">10 min read</span>
+                            <div class="card-tags">
+                                <span class="tag-small">Serverless</span>
+                                <span class="tag-small">Cloud</span>
+                                <span class="tag-small">Architecture</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="article-card animate-on-scroll">
-                    <div class="article-category">Mobile Development</div>
-                    <h3>Building Offline-First Mobile Apps</h3>
-                    <p>Offline functionality isn't a luxury—it's an expectation. Learn how to implement local-first architecture, sync data reliably, and handle edge cases when users have poor or no connectivity.</p>
-                    <div class="article-details">
-                        <span class="read-time">9 min read</span>
-                        <span class="publish-date">July 5, 2026</span>
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image">
+                        <img src="assets/blog-mobile.png" alt="Mobile app development">
                     </div>
-                    <a href="#" class="read-link">Read Article →</a>
+                    <div class="blog-card-content">
+                        <div class="card-meta">
+                            <span class="article-category">Mobile Development</span>
+                            <span class="publish-date">July 5, 2026</span>
+                        </div>
+                        <h3>Building Offline-First Mobile Apps</h3>
+                        <p>Offline functionality isn't a luxury—it's an expectation. Learn how to implement local-first architecture, sync data reliably, and handle edge cases when users have poor or no connectivity.</p>
+                        <div class="card-footer">
+                            <span class="read-time">9 min read</span>
+                            <div class="card-tags">
+                                <span class="tag-small">Mobile</span>
+                                <span class="tag-small">Offline</span>
+                                <span class="tag-small">Architecture</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="article-card animate-on-scroll">
-                    <div class="article-category">DevOps & Security</div>
-                    <h3>Zero-Trust Security for Modern APIs</h3>
-                    <p>Zero-trust architecture is the new standard for securing APIs and applications. Implement authentication, authorization, and encryption best practices that protect your users and comply with modern standards.</p>
-                    <div class="article-details">
-                        <span class="read-time">11 min read</span>
-                        <span class="publish-date">June 28, 2026</span>
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image">
+                        <img src="assets/blog-security.png" alt="Security and protection">
                     </div>
-                    <a href="#" class="read-link">Read Article →</a>
+                    <div class="blog-card-content">
+                        <div class="card-meta">
+                            <span class="article-category">DevOps & Security</span>
+                            <span class="publish-date">June 28, 2026</span>
+                        </div>
+                        <h3>Zero-Trust Security for Modern APIs</h3>
+                        <p>Zero-trust architecture is the new standard for securing APIs and applications. Implement authentication, authorization, and encryption best practices that protect your users and comply with modern standards.</p>
+                        <div class="card-footer">
+                            <span class="read-time">11 min read</span>
+                            <div class="card-tags">
+                                <span class="tag-small">Security</span>
+                                <span class="tag-small">DevOps</span>
+                                <span class="tag-small">API</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="article-card animate-on-scroll">
-                    <div class="article-category">Business Strategy</div>
-                    <h3>From Idea to MVP: Tech Stack Selection</h3>
-                    <p>Making the right technology choices early sets the foundation for growth. We share our framework for selecting frameworks, databases, and platforms based on business requirements and scalability needs.</p>
-                    <div class="article-details">
-                        <span class="read-time">8 min read</span>
-                        <span class="publish-date">June 20, 2026</span>
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image">
+                        <img src="assets/blog-techstack.png" alt="Tech stack selection">
                     </div>
-                    <a href="#" class="read-link">Read Article →</a>
+                    <div class="blog-card-content">
+                        <div class="card-meta">
+                            <span class="article-category">Business Strategy</span>
+                            <span class="publish-date">June 20, 2026</span>
+                        </div>
+                        <h3>From Idea to MVP: Tech Stack Selection</h3>
+                        <p>Making the right technology choices early sets the foundation for growth. We share our framework for selecting frameworks, databases, and platforms based on business requirements and scalability needs.</p>
+                        <div class="card-footer">
+                            <span class="read-time">8 min read</span>
+                            <div class="card-tags">
+                                <span class="tag-small">Strategy</span>
+                                <span class="tag-small">MVP</span>
+                                <span class="tag-small">Planning</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="article-card animate-on-scroll">
-                    <div class="article-category">Performance</div>
-                    <h3>Web Vitals Optimization: Making Sites 3x Faster</h3>
-                    <p>Improve your Core Web Vitals scores with our proven techniques. From code splitting to image optimization, see how we've helped clients achieve sub-2-second load times and 90+ Lighthouse scores.</p>
-                    <div class="article-details">
-                        <span class="read-time">7 min read</span>
-                        <span class="publish-date">June 15, 2026</span>
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image">
+                        <img src="assets/blog-performance.png" alt="Web performance optimization">
                     </div>
-                    <a href="#" class="read-link">Read Article →</a>
+                    <div class="blog-card-content">
+                        <div class="card-meta">
+                            <span class="article-category">Performance</span>
+                            <span class="publish-date">June 15, 2026</span>
+                        </div>
+                        <h3>Web Vitals Optimization: Making Sites 3x Faster</h3>
+                        <p>Improve your Core Web Vitals scores with our proven techniques. From code splitting to image optimization, see how we've helped clients achieve sub-2-second load times and 90+ Lighthouse scores.</p>
+                        <div class="card-footer">
+                            <span class="read-time">7 min read</span>
+                            <div class="card-tags">
+                                <span class="tag-small">Performance</span>
+                                <span class="tag-small">Optimization</span>
+                                <span class="tag-small">Speed</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="article-card animate-on-scroll">
-                    <div class="article-category">Database Design</div>
-                    <h3>Choosing Between SQL and NoSQL Databases</h3>
-                    <p>The database choice can make or break your application. We break down when to use PostgreSQL, MongoDB, DynamoDB, and Firestore with real-world scenarios and performance comparisons.</p>
-                    <div class="article-details">
-                        <span class="read-time">13 min read</span>
-                        <span class="publish-date">June 10, 2026</span>
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-image">
+                        <img src="assets/blog-serverless.png" alt="Database selection">
                     </div>
-                    <a href="#" class="read-link">Read Article →</a>
+                    <div class="blog-card-content">
+                        <div class="card-meta">
+                            <span class="article-category">Database Design</span>
+                            <span class="publish-date">June 10, 2026</span>
+                        </div>
+                        <h3>Choosing Between SQL and NoSQL Databases</h3>
+                        <p>The database choice can make or break your application. We break down when to use PostgreSQL, MongoDB, DynamoDB, and Firestore with real-world scenarios and performance comparisons.</p>
+                        <div class="card-footer">
+                            <span class="read-time">13 min read</span>
+                            <div class="card-tags">
+                                <span class="tag-small">Database</span>
+                                <span class="tag-small">SQL</span>
+                                <span class="tag-small">NoSQL</span>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
         </div>
