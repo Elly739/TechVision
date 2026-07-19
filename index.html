@@ -150,7 +150,21 @@
         </div>
         <div class="case-study-grid">
             <div class="case-study-card animate-on-scroll">
-                <div class="case-study-image">📊</div>
+                <div class="case-study-image" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(6, 182, 212, 0.1)); display: flex; align-items: center; justify-content: center;">
+                    <svg viewBox="0 0 300 300" style="width: 60%; height: auto; opacity: 0.4;">
+                        <defs>
+                            <linearGradient id="dashgradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="30" y="30" width="240" height="240" rx="12" fill="none" stroke="url(#dashgradient)" stroke-width="2"/>
+                        <line x1="40" y1="80" x2="260" y2="80" stroke="url(#dashgradient)" stroke-width="1.5"/>
+                        <rect x="50" y="110" width="40" height="120" fill="none" stroke="url(#dashgradient)" stroke-width="2"/>
+                        <rect x="110" y="90" width="40" height="140" fill="none" stroke="url(#dashgradient)" stroke-width="2"/>
+                        <rect x="170" y="130" width="40" height="100" fill="none" stroke="url(#dashgradient)" stroke-width="2"/>
+                    </svg>
+                </div>
                 <div class="case-study-content">
                     <span class="case-study-tag">SaaS Platform</span>
                     <h3 class="case-study-title">Enterprise Dashboard</h3>
@@ -168,7 +182,20 @@
                 </div>
             </div>
             <div class="case-study-card animate-on-scroll">
-                <div class="case-study-image">📱</div>
+                <div class="case-study-image" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(6, 182, 212, 0.1)); display: flex; align-items: center; justify-content: center;">
+                    <svg viewBox="0 0 300 300" style="width: 45%; height: auto; opacity: 0.4;">
+                        <defs>
+                            <linearGradient id="mobilegradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="70" y="20" width="160" height="260" rx="16" fill="none" stroke="url(#mobilegradient)" stroke-width="2"/>
+                        <rect x="80" y="50" width="140" height="40" fill="none" stroke="url(#mobilegradient)" stroke-width="1.5"/>
+                        <rect x="80" y="110" width="140" height="120" fill="none" stroke="url(#mobilegradient)" stroke-width="1.5"/>
+                        <rect x="80" y="250" width="140" height="25" fill="none" stroke="url(#mobilegradient)" stroke-width="1.5"/>
+                    </svg>
+                </div>
                 <div class="case-study-content">
                     <span class="case-study-tag">Mobile App</span>
                     <h3 class="case-study-title">Consumer App Launch</h3>
@@ -351,6 +378,85 @@
                     <p class="faq-answer-text">We use clear, consistent communication via Slack, email, and weekly check-ins. You'll have direct access to the project lead and regular progress updates. We keep you informed every step of the way.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS & BLOG SECTION -->
+    <section class="section insights-section">
+        <div class="section-heading">
+            <p class="eyebrow">Latest Insights</p>
+            <h2>Stay ahead with tech trends and best practices.</h2>
+            <p>Practical advice, industry insights, and case studies from our team of experienced builders.</p>
+        </div>
+        <div class="insights-grid">
+            <article class="insight-card animate-on-scroll">
+                <div class="insight-category">Web Development</div>
+                <h3>Next.js 16: The Future of React Development</h3>
+                <p>Explore the latest features in Next.js 16 including the React Compiler, enhanced caching APIs, and improved performance optimizations that make building scalable web apps faster than ever.</p>
+                <div class="insight-meta">
+                    <span class="read-time">8 min read</span>
+                    <span class="publish-date">Jul 18, 2026</span>
+                </div>
+                <a href="#" class="read-more">Read Article →</a>
+            </article>
+
+            <article class="insight-card animate-on-scroll">
+                <div class="insight-category">Cloud Architecture</div>
+                <h3>Scaling Your App: Serverless vs Traditional Containers</h3>
+                <p>A deep dive into when serverless makes sense for your application. We compare AWS Lambda, Google Cloud Functions, and container orchestration with real-world examples from our projects.</p>
+                <div class="insight-meta">
+                    <span class="read-time">12 min read</span>
+                    <span class="publish-date">Jul 12, 2026</span>
+                </div>
+                <a href="#" class="read-more">Read Article →</a>
+            </article>
+
+            <article class="insight-card animate-on-scroll">
+                <div class="insight-category">Mobile Development</div>
+                <h3>Building Offline-First Mobile Apps in 2026</h3>
+                <p>Master offline functionality for better user experience. Learn how to implement local-first architecture, sync data reliably, and handle edge cases when users have poor connectivity.</p>
+                <div class="insight-meta">
+                    <span class="read-time">10 min read</span>
+                    <span class="publish-date">Jul 5, 2026</span>
+                </div>
+                <a href="#" class="read-more">Read Article →</a>
+            </article>
+
+            <article class="insight-card animate-on-scroll">
+                <div class="insight-category">DevOps & Security</div>
+                <h3>Zero-Trust Security for Modern Applications</h3>
+                <p>Why zero-trust is the new standard for API security. Implement authentication, authorization, and encryption best practices that protect your users and comply with modern security standards.</p>
+                <div class="insight-meta">
+                    <span class="read-time">9 min read</span>
+                    <span class="publish-date">Jun 28, 2026</span>
+                </div>
+                <a href="#" class="read-more">Read Article →</a>
+            </article>
+
+            <article class="insight-card animate-on-scroll">
+                <div class="insight-category">Business Strategy</div>
+                <h3>From Idea to MVP: The Right Tech Stack Selection</h3>
+                <p>Making the right technology choices early sets the foundation for growth. We share our framework for selecting frameworks, databases, and cloud platforms based on business requirements.</p>
+                <div class="insight-meta">
+                    <span class="read-time">11 min read</span>
+                    <span class="publish-date">Jun 20, 2026</span>
+                </div>
+                <a href="#" class="read-more">Read Article →</a>
+            </article>
+
+            <article class="insight-card animate-on-scroll">
+                <div class="insight-category">Performance</div>
+                <h3>Web Vitals Optimization: Making Sites 3x Faster</h3>
+                <p>Learn our proven techniques for improving Core Web Vitals scores. From code splitting to image optimization, see how we've helped clients achieve sub-2-second load times.</p>
+                <div class="insight-meta">
+                    <span class="read-time">7 min read</span>
+                    <span class="publish-date">Jun 15, 2026</span>
+                </div>
+                <a href="#" class="read-more">Read Article →</a>
+            </article>
+        </div>
+        <div style="text-align: center; margin-top: 48px;">
+            <a href="#" class="button secondary">View All Articles</a>
         </div>
     </section>
 

@@ -49,7 +49,20 @@
         <div style="display: grid; gap: 48px;">
             <!-- Case Study 1 -->
             <div class="animate-on-scroll" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
-                <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.08)); border-radius: 16px; padding: 80px; display: flex; align-items: center; justify-content: center; min-height: 400px; font-size: 5rem;">📊</div>
+                <div class="case-study-visual" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(6, 182, 212, 0.1)); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(79, 70, 229, 0.1); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <svg viewBox="0 0 400 400" style="width: 80%; height: auto; opacity: 0.3;">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="20" y="20" width="360" height="360" rx="20" fill="none" stroke="url(#grad1)" stroke-width="3"/>
+                        <line x1="40" y1="100" x2="360" y2="100" stroke="url(#grad1)" stroke-width="2"/>
+                        <rect x="40" y="140" width="80" height="200" fill="none" stroke="url(#grad1)" stroke-width="2"/>
+                        <polyline points="140,280 180,180 220,220 260,100 320,200" fill="none" stroke="url(#grad1)" stroke-width="2"/>
+                    </svg>
+                </div>
                 <div>
                     <span class="case-study-tag">SaaS Platform</span>
                     <h2 style="margin-top: 16px;">Enterprise Analytics Dashboard</h2>
@@ -114,12 +127,39 @@
                     <p style="color: var(--muted); margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); font-style: italic;">"The team moved fast without sacrificing quality. We launched on schedule and have had zero major production issues. Highly recommended."</p>
                     <p style="color: var(--muted); margin-top: 8px; font-weight: 600;">— Marcus Williams, Product Manager, Apex</p>
                 </div>
-                <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.08)); border-radius: 16px; padding: 80px; display: flex; align-items: center; justify-content: center; min-height: 400px; font-size: 5rem;">📱</div>
+                <div class="case-study-visual" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(6, 182, 212, 0.1)); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(79, 70, 229, 0.1); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <svg viewBox="0 0 400 400" style="width: 60%; height: auto; opacity: 0.3;">
+                        <defs>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="80" y="30" width="240" height="340" rx="20" fill="none" stroke="url(#grad2)" stroke-width="3"/>
+                        <rect x="90" y="60" width="220" height="40" fill="none" stroke="url(#grad2)" stroke-width="2"/>
+                        <rect x="90" y="120" width="220" height="180" fill="none" stroke="url(#grad2)" stroke-width="2"/>
+                        <rect x="90" y="310" width="220" height="40" fill="none" stroke="url(#grad2)" stroke-width="2"/>
+                    </svg>
+                </div>
             </div>
 
             <!-- Case Study 3 -->
             <div class="animate-on-scroll" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
-                <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.08)); border-radius: 16px; padding: 80px; display: flex; align-items: center; justify-content: center; min-height: 400px; font-size: 5rem;">☁️</div>
+                <div class="case-study-visual" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(6, 182, 212, 0.1)); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(79, 70, 229, 0.1); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <svg viewBox="0 0 400 400" style="width: 70%; height: auto; opacity: 0.3;">
+                        <defs>
+                            <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="120" cy="200" r="50" fill="none" stroke="url(#grad3)" stroke-width="2"/>
+                        <circle cx="200" cy="150" r="60" fill="none" stroke="url(#grad3)" stroke-width="2"/>
+                        <circle cx="280" cy="200" r="50" fill="none" stroke="url(#grad3)" stroke-width="2"/>
+                        <circle cx="200" cy="280" r="45" fill="none" stroke="url(#grad3)" stroke-width="2"/>
+                        <circle cx="200" cy="200" r="35" fill="none" stroke="url(#grad3)" stroke-width="2"/>
+                    </svg>
+                </div>
                 <div>
                     <span class="case-study-tag">Cloud Systems</span>
                     <h2 style="margin-top: 16px;">Serverless Infrastructure Migration</h2>
