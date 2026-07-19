@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Insights - TechVision</title>
+    <meta name="description" content="Learn about web development, cloud architecture, mobile apps, and modern tech best practices from TechVision.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">TechVision</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="integrations.html">Integrations</a>
+                <a href="blog.html" aria-current="page">Blog</a>
+                <a href="pricing.html">Pricing</a>
+            </nav>
+            <a href="contact.html" class="button primary">Start a Project</a>
+        </div>
+    </header>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow">Insights & Knowledge</p>
+                <h1>Technology Trends & Best Practices</h1>
+                <p class="hero-subtitle">Learn from our team about building scalable applications, modern architecture, and industry best practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED ARTICLE -->
+    <section class="featured-article-section">
+        <div class="container">
+            <article class="featured-article">
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span class="category featured-category">Web Development</span>
+                        <span class="publish-date">July 18, 2026</span>
+                    </div>
+                    <h2>Building High-Performance Web Applications with Next.js 16</h2>
+                    <p class="article-excerpt">Next.js 16 brings revolutionary features to React development. In this comprehensive guide, we explore the React Compiler, enhanced caching APIs, and performance optimizations that make building scalable applications faster than ever.</p>
+                    
+                    <div class="article-body">
+                        <h3>Why Next.js 16 Matters</h3>
+                        <p>The JavaScript ecosystem moves fast. What was cutting-edge 6 months ago is now the minimum expectation. Next.js 16 addresses the most critical pain points developers face: build times, runtime performance, and developer experience.</p>
+                        
+                        <h3>Key Features That Change Everything</h3>
+                        <p><strong>React Compiler (Stable)</strong> - The long-awaited React Compiler is now production-ready. It automatically optimizes your components, reducing bundle size and improving performance without requiring manual memoization strategies.</p>
+                        
+                        <p><strong>Enhanced Caching APIs</strong> - The new `revalidateTag()` and `updateTag()` APIs give you granular control over cache invalidation. This means faster page loads and more flexible data strategies for complex applications.</p>
+                        
+                        <p><strong>Turbopack (Default)</strong> - Turbopack replaces Webpack as the default bundler, delivering 10-20x faster local development builds. Cold start time dropped from 10+ seconds to under 2 seconds in our benchmarks.</p>
+                        
+                        <h3>Real-World Impact</h3>
+                        <p>We recently migrated a large SaaS platform to Next.js 16 and saw remarkable improvements:</p>
+                        <ul style="color: var(--muted); line-height: 1.8; margin: 16px 0;">
+                            <li>Build time: 45 seconds → 8 seconds (5.6x faster)</li>
+                            <li>Cold start time: 12 seconds → 1.5 seconds</li>
+                            <li>First Contentful Paint: 2.8s → 1.1s</li>
+                            <li>Interactive time: 4.2s → 1.8s</li>
+                        </ul>
+                        
+                        <h3>Getting Started</h3>
+                        <p>Upgrading to Next.js 16 is straightforward. Most projects upgrade with zero breaking changes. The React Compiler works automatically in the background, and Turbopack is enabled by default in new projects.</p>
+                        
+                        <p>For teams considering the upgrade, we recommend:</p>
+                        <ul style="color: var(--muted); line-height: 1.8; margin: 16px 0;">
+                            <li>Test thoroughly in your staging environment first</li>
+                            <li>Enable the React Compiler and measure impact</li>
+                            <li>Take advantage of new caching APIs for improved performance</li>
+                            <li>Use Turbopack for faster development cycles</li>
+                        </ul>
+                        
+                        <p>The performance gains alone make the upgrade worthwhile. Combined with improved developer experience, Next.js 16 is a clear choice for new projects and a strongly recommended upgrade for existing ones.</p>
+                    </div>
+                    
+                    <div class="article-footer">
+                        <span class="read-time">12 min read</span>
+                        <div class="article-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(6, 182, 212, 0.15)); border-radius: 20px; height: 100%; display: flex; align-items: center; justify-content: center;">
+                        <svg viewBox="0 0 400 400" style="width: 60%; height: auto; opacity: 0.3;">
+                            <defs>
+                                <linearGradient id="nextjsgradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="30" y="30" width="340" height="340" rx="20" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
+                            <circle cx="200" cy="100" r="30" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
+                            <circle cx="300" cy="100" r="30" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
+                            <rect x="50" y="160" width="300" height="180" rx="10" fill="none" stroke="url(#nextjsgradient)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ALL ARTICLES GRID -->
+    <section class="all-articles-section">
+        <div class="container">
+            <h2 style="margin-bottom: 48px; text-align: center;">More Articles</h2>
+            <div class="articles-grid">
+                <article class="article-card animate-on-scroll">
+                    <div class="article-category">Cloud Architecture</div>
+                    <h3>Scaling Your Application: Serverless vs Containers</h3>
+                    <p>Choosing between serverless and containerized applications depends on your workload. We compare AWS Lambda, Google Cloud Functions, and Kubernetes with real metrics and use cases from our production systems.</p>
+                    <div class="article-details">
+                        <span class="read-time">10 min read</span>
+                        <span class="publish-date">July 12, 2026</span>
+                    </div>
+                    <a href="#" class="read-link">Read Article →</a>
+                </article>
+
+                <article class="article-card animate-on-scroll">
+                    <div class="article-category">Mobile Development</div>
+                    <h3>Building Offline-First Mobile Apps</h3>
+                    <p>Offline functionality isn't a luxury—it's an expectation. Learn how to implement local-first architecture, sync data reliably, and handle edge cases when users have poor or no connectivity.</p>
+                    <div class="article-details">
+                        <span class="read-time">9 min read</span>
+                        <span class="publish-date">July 5, 2026</span>
+                    </div>
+                    <a href="#" class="read-link">Read Article →</a>
+                </article>
+
+                <article class="article-card animate-on-scroll">
+                    <div class="article-category">DevOps & Security</div>
+                    <h3>Zero-Trust Security for Modern APIs</h3>
+                    <p>Zero-trust architecture is the new standard for securing APIs and applications. Implement authentication, authorization, and encryption best practices that protect your users and comply with modern standards.</p>
+                    <div class="article-details">
+                        <span class="read-time">11 min read</span>
+                        <span class="publish-date">June 28, 2026</span>
+                    </div>
+                    <a href="#" class="read-link">Read Article →</a>
+                </article>
+
+                <article class="article-card animate-on-scroll">
+                    <div class="article-category">Business Strategy</div>
+                    <h3>From Idea to MVP: Tech Stack Selection</h3>
+                    <p>Making the right technology choices early sets the foundation for growth. We share our framework for selecting frameworks, databases, and platforms based on business requirements and scalability needs.</p>
+                    <div class="article-details">
+                        <span class="read-time">8 min read</span>
+                        <span class="publish-date">June 20, 2026</span>
+                    </div>
+                    <a href="#" class="read-link">Read Article →</a>
+                </article>
+
+                <article class="article-card animate-on-scroll">
+                    <div class="article-category">Performance</div>
+                    <h3>Web Vitals Optimization: Making Sites 3x Faster</h3>
+                    <p>Improve your Core Web Vitals scores with our proven techniques. From code splitting to image optimization, see how we've helped clients achieve sub-2-second load times and 90+ Lighthouse scores.</p>
+                    <div class="article-details">
+                        <span class="read-time">7 min read</span>
+                        <span class="publish-date">June 15, 2026</span>
+                    </div>
+                    <a href="#" class="read-link">Read Article →</a>
+                </article>
+
+                <article class="article-card animate-on-scroll">
+                    <div class="article-category">Database Design</div>
+                    <h3>Choosing Between SQL and NoSQL Databases</h3>
+                    <p>The database choice can make or break your application. We break down when to use PostgreSQL, MongoDB, DynamoDB, and Firestore with real-world scenarios and performance comparisons.</p>
+                    <div class="article-details">
+                        <span class="read-time">13 min read</span>
+                        <span class="publish-date">June 10, 2026</span>
+                    </div>
+                    <a href="#" class="read-link">Read Article →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="section">
+        <div class="newsletter-box animate-on-scroll">
+            <h2>Stay updated with the latest tech insights</h2>
+            <p>Get our best articles, research, and tips delivered to your inbox every two weeks.</p>
+            <form class="newsletter-form" onsubmit="return false;">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="button primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>TechVision</h3>
+                <p>Building digital solutions for ambitious businesses in Kenya and beyond.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="services.html">Web Development</a>
+                <a href="services.html">Mobile Apps</a>
+                <a href="services.html">Cloud Infrastructure</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Get in Touch</a>
+                <a href="pricing.html">View Pricing</a>
+                <a href="case-studies.html">Case Studies</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechVision. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
